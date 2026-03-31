@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stock Casa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>Stock Casa</h1>
+    <button id="reset" class="reset-button">↺</button>
+    <p class="subtitle">Introduce cuánto tienes ahora mismo</p>
+
+   <div class="card">
+        <div id="productos-lista"></div>
+
+        <button id="calcular">Calcular compra</button>
+    </div>
+
+    <div class="card">
+        <div class="title-row">
+            <h2>Lista de la compra</h2>
+            <button id="copiar-lista" class="copy-icon">⧉</button>
+        </div>
+        <div id="resultado">Aquí saldrá lo que falta por comprar.</div>
+        <button id="compra-hecha" class="buy-button">Ya he hecho la compra</button>
+    </div>
+
+     <div class="card">
+            <button id="toggle-editor" class="edit-button">Editar cesta de la compra</button>
+
+            <div id="editor-cesta" class="editor-cesta oculto">
+                <h2>Editar cesta de la compra</h2>
+
+                <div class="add-form">
+                    <input type="text" id="nuevo-nombre" placeholder="Nombre del producto" />
+
+                    <select id="nueva-unidad">
+                        <option value="sobres">Sobres</option>
+                        <option value="gramos">Gramos</option>
+                        <option value="paquetes">Paquetes</option>
+                        <option value="unidades">Unidades</option>
+                    </select>
+
+                    <input type="number" id="nuevo-maximo" placeholder="Stock máximo" min="1" />
+
+                    <button id="anadir-producto">Añadir</button>
+                </div>
+
+                <div class="productos-editor">
+                    <h3>Productos actuales</h3>
+                    <div id="lista-productos-editor"></div>
+                </div>
+            </div>
+        </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
